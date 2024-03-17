@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title DONATIONS
+  style.
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+          }
+
+          h1 {
+            text-align: center;
+            color: #d9534f;
+          }
+
+          ol {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px;
+          }
+
+          li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+          }
+
+          p {
+            margin: 5px 0;}
+  body
+    h1  DONATIONS
+    ol
+      each value in donation
+        li
+          p  #{value.DONOR_ID}
+          p BLOOD TYPE: #{value.BLOOD_TYPE}
+          p BLOOD ID: #{value.BLOOD_ID}
+          p UNITS: #{value.UNITS}
+          p DATE OF DONATION: #{value.Date_of_donation}
